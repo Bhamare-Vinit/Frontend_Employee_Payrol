@@ -98,7 +98,7 @@
           Employee Payroll form
         </div>
 
-        <form action="">
+        <form id="addEmployeeForm" action="" >
           <div style="display: flex">
             <div
               style="
@@ -272,7 +272,7 @@
                   gap: 20px;
                 "
               >
-                <input type="radio" name="profile_image" id="img1" />
+                <input type="radio" name="profile_image" id="img1" value="../assets/Om.jpeg"/>
                 <img
                   src="../assets/Om.jpeg"
                   alt="Profile 1"
@@ -280,7 +280,7 @@
                   height="30"
                   style="border-radius: 50%"
                 />
-                <input type="radio" name="profile_image" id="img2" />
+                <input type="radio" name="profile_image" id="img2" value="../assets/Om.jpeg"/>
                 <img
                   src="../assets/Om.jpeg"
                   alt="Profile 2"
@@ -288,7 +288,7 @@
                   height="30"
                   style="border-radius: 50%"
                 />
-                <input type="radio" name="profile_image" id="img3" />
+                <input type="radio" name="profile_image" id="img3" value="../assets/Om.jpeg"/>
                 <img
                   src="../assets/Om.jpeg"
                   alt="Profile 3"
@@ -296,7 +296,7 @@
                   height="30"
                   style="border-radius: 50%"
                 />
-                <input type="radio" name="profile_image" id="img4" />
+                <input type="radio" name="profile_image" id="img4" value="../assets/Om.jpeg"/>
                 <img
                   src="../assets/Om.jpeg"
                   alt="Profile 4"
@@ -425,6 +425,7 @@
                 "
               >
                 <select
+                id="day"
                   name="day"
                   style="
                     padding: 8px;
@@ -440,6 +441,7 @@
                   <!-- Add more days -->
                 </select>
                 <select
+                id="month"
                   name="month"
                   style="
                     padding: 8px;
@@ -455,6 +457,7 @@
                   <!-- Add more months -->
                 </select>
                 <select
+                id="year"
                   name="year"
                   style="
                     padding: 8px;
@@ -510,7 +513,9 @@
           "
         >
           <div>
-            <button
+            <button 
+            id=""
+            onclick="redirectToDashboard()"
               type="button"
               style="
                 padding: 10px 20px;
@@ -526,6 +531,8 @@
           </div>
           <div>
             <button
+            id="submitBtn"
+            onclick="submitForm()"
               type="submit"
               style="
                 padding: 10px 20px;
@@ -540,6 +547,8 @@
               Submit
             </button>
             <button
+            id="resetBtn"
+            onclick="resetForm()"
               type="reset"
               style="
                 padding: 10px 20px;
@@ -556,5 +565,6 @@
         </div>
       </div>
     </div>
+    <script src="../script/add_user.js"></script>
   </body>
 </html>
