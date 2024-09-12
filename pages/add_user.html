@@ -98,7 +98,7 @@
           Employee Payroll form
         </div>
 
-        <form id="addEmployeeForm" action="" >
+        <form id="addEmployeeForm" action="">
           <div style="display: flex">
             <div
               style="
@@ -272,7 +272,12 @@
                   gap: 20px;
                 "
               >
-                <input type="radio" name="profile_image" id="img1" value="../assets/Om.jpeg"/>
+                <input
+                  type="radio"
+                  name="profile_image"
+                  id="img1"
+                  value="../assets/Om.jpeg"
+                />
                 <img
                   src="../assets/Om.jpeg"
                   alt="Profile 1"
@@ -280,7 +285,12 @@
                   height="30"
                   style="border-radius: 50%"
                 />
-                <input type="radio" name="profile_image" id="img2" value="../assets/Om.jpeg"/>
+                <input
+                  type="radio"
+                  name="profile_image"
+                  id="img2"
+                  value="../assets/Om.jpeg"
+                />
                 <img
                   src="../assets/Om.jpeg"
                   alt="Profile 2"
@@ -288,7 +298,12 @@
                   height="30"
                   style="border-radius: 50%"
                 />
-                <input type="radio" name="profile_image" id="img3" value="../assets/Om.jpeg"/>
+                <input
+                  type="radio"
+                  name="profile_image"
+                  id="img3"
+                  value="../assets/Om.jpeg"
+                />
                 <img
                   src="../assets/Om.jpeg"
                   alt="Profile 3"
@@ -296,7 +311,12 @@
                   height="30"
                   style="border-radius: 50%"
                 />
-                <input type="radio" name="profile_image" id="img4" value="../assets/Om.jpeg"/>
+                <input
+                  type="radio"
+                  name="profile_image"
+                  id="img4"
+                  value="../assets/Om.jpeg"
+                />
                 <img
                   src="../assets/Om.jpeg"
                   alt="Profile 4"
@@ -425,7 +445,7 @@
                 "
               >
                 <select
-                id="day"
+                  id="day"
                   name="day"
                   style="
                     padding: 8px;
@@ -438,10 +458,9 @@
                   <option value="">Day</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
-                  <!-- Add more days -->
                 </select>
                 <select
-                id="month"
+                  id="month"
                   name="month"
                   style="
                     padding: 8px;
@@ -454,10 +473,9 @@
                   <option value="">Month</option>
                   <option value="1">January</option>
                   <option value="2">February</option>
-                  <!-- Add more months -->
                 </select>
                 <select
-                id="year"
+                  id="year"
                   name="year"
                   style="
                     padding: 8px;
@@ -470,7 +488,6 @@
                   <option value="">Year</option>
                   <option value="2023">2023</option>
                   <option value="2024">2024</option>
-                  <!-- Add more years -->
                 </select>
               </div>
               <div
@@ -513,9 +530,9 @@
           "
         >
           <div>
-            <button 
-            id=""
-            onclick="redirectToDashboard()"
+            <button
+              id=""
+              onclick="redirectToDashboard()"
               type="button"
               style="
                 padding: 10px 20px;
@@ -531,8 +548,8 @@
           </div>
           <div>
             <button
-            id="submitBtn"
-            onclick="submitForm()"
+              id="submitBtn"
+              onclick="submitForm()"
               type="submit"
               style="
                 padding: 10px 20px;
@@ -547,8 +564,8 @@
               Submit
             </button>
             <button
-            id="resetBtn"
-            onclick="resetForm()"
+              id="resetBtn"
+              onclick="resetForm()"
               type="reset"
               style="
                 padding: 10px 20px;
@@ -557,6 +574,7 @@
                 background-color: #f5f5f5;
                 height: 50px;
                 width: 150px;
+                cursor: pointer;
               "
             >
               Reset
@@ -565,6 +583,11 @@
         </div>
       </div>
     </div>
+
     <script src="../script/add_user.js"></script>
   </body>
+  <script
+    type="text/javascript"
+    src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+  ></script>
 </html>

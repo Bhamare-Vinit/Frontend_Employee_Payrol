@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script
+      type="text/javascript"
+      src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    ></script>
+    <script
       src="https://kit.fontawesome.com/007aa99568.js"
       crossorigin="anonymous"
     ></script>
@@ -154,67 +158,66 @@
             padding: 10px;
           "
         >
-        <thead>
-          <tr style="background-color: #42515f; color: white">
-            <th
-              style="
-                width: 25%;
-                border: 1px solid black;
-                border-collapse: collapse;
-                padding: 20px;
-              "
-            >
-              NAME
-            </th>
-            <th
-              style="
-                width: 12%;
-                border: 1px solid black;
-                border-collapse: collapse;
-              "
-            >
-              GENDER
-            </th>
-            <th
-              style="
-                width: 24%;
-                border: 1px solid black;
-                border-collapse: collapse;
-              "
-            >
-              DEPARTMENT
-            </th>
-            <th
-              style="
-                width: 13%;
-                border: 1px solid black;
-                border-collapse: collapse;
-              "
-            >
-              SALARY
-            </th>
-            <th
-              style="
-                width: 13%;
-                border: 1px solid black;
-                border-collapse: collapse;
-              "
-            >
-              START DATE
-            </th>
-            <th
-              style="
-                width: 13%;
-                border: 1px solid black;
-                border-collapse: collapse;
-              "
-            >
-              ACTIONS
-            </th>
-          </tr>
-        </thead>
-        <tbody id="tableContainer">
-          
+          <thead>
+            <tr style="background-color: #42515f; color: white">
+              <th
+                style="
+                  width: 25%;
+                  border: 1px solid black;
+                  border-collapse: collapse;
+                  padding: 20px;
+                "
+              >
+                NAME
+              </th>
+              <th
+                style="
+                  width: 12%;
+                  border: 1px solid black;
+                  border-collapse: collapse;
+                "
+              >
+                GENDER
+              </th>
+              <th
+                style="
+                  width: 24%;
+                  border: 1px solid black;
+                  border-collapse: collapse;
+                "
+              >
+                DEPARTMENT
+              </th>
+              <th
+                style="
+                  width: 13%;
+                  border: 1px solid black;
+                  border-collapse: collapse;
+                "
+              >
+                SALARY
+              </th>
+              <th
+                style="
+                  width: 13%;
+                  border: 1px solid black;
+                  border-collapse: collapse;
+                "
+              >
+                START DATE
+              </th>
+              <th
+                style="
+                  width: 13%;
+                  border: 1px solid black;
+                  border-collapse: collapse;
+                "
+              >
+                ACTIONS
+              </th>
+            </tr>
+          </thead>
+          <tbody id="tableContainer">
             <!-- <tr
               style="background-color: white; color: black; text-align: center"
             >

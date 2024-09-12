@@ -1,1 +1,32 @@
-{}
+{
+  "user": [
+    {
+      "id": "c410",
+      "name": "vinit",
+      "profile_img": "../assets/Om.jpeg",
+      "gender": "male",
+      "department": [
+        "HR",
+        "Finance",
+        "Others"
+      ],
+      "salary": "50000",
+      "date": "2/2/2023",
+      "notes": "me"
+    },
+    {
+      "id": "813e",
+      "name": "bhamare",
+      "profile_img": "../assets/Om.jpeg",
+      "gender": "male",
+      "department": [
+        "HR",
+        "Finance",
+        "Others"
+      ],
+      "salary": "70000",
+      "date": "2/2/2024",
+      "notes": "niuhi"
+    }
+  ]
+}
