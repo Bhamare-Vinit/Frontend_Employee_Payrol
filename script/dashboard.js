@@ -78,34 +78,24 @@
 //               </td>`
 //         container.appendChild(row);
 //     })
-
-    
-
 //     console.log(keys);
-
 // }
 // window.onload=displayTable;
 
 function redirectToAddUser() {
-
     window.location = "../pages/add_user.html";
 }
-
 // function displayTable() {
 //     const keys = Object.keys(localStorage);
-
 //     const container = $('#tableContainer');
 //     container.html(''); 
-
 //     keys.forEach((key) => {
 //         const employeedata = JSON.parse(localStorage.getItem(key));
-
 //         const row = $('<tr></tr>').addClass('row').css({
 //             'background-color': 'white',
 //             'color': 'black',
 //             'text-align': 'center'
 //         });
-
 //         row.html(`
 //             <td style="padding: 20px; display: flex; align-items: center; justify-content: center;">
 //                 <img src="../assets/Om.jpeg" style="border-radius: 50%; width: 40px; height: 40px" alt="profile" />
@@ -120,7 +110,6 @@ function redirectToAddUser() {
 //                 <i class="fa-solid fa-pen"></i>
 //             </td>
 //         `);
-
 //         const departmentsContainer = row.find('.departments');
 //         employeedata.department.forEach(department => {
 //             if (department) {
@@ -133,25 +122,40 @@ function redirectToAddUser() {
 //                 departmentsContainer.append(departmentSpan);
 //             }
 //         });
-
 //         container.append(row); 
 //     });
-
 //     console.log(keys);
 //     makeRequest('http://localhost:3000/user','GET',{})
-
-    
 // }
 
+$(document).ready(function() {
+    console.log("Document ready");
+    displayTable(); // Initial table display
+
+    // Event listener for search input
+    $("#searchInput").on("input", function() {
+        console.log("Search input changed");
+        displayTable(); // Refresh table based on search input
+    });
+});
 
 function displayTable() {
     const container = $("#tableContainer");
     container.html("");
+
+    const searchValue = $("#searchInput").val().trim().toLowerCase();
+
     $.ajax({
         url: "http://localhost:3000/user",  
         method: "GET",
         success: function(data) {
-            data.forEach(function(user) {
+
+
+            const filteredData = data.filter(user => 
+                user.name.toLowerCase().includes(searchValue) // Filter based on search input
+            );
+
+            filteredData.forEach(function(user) {
                 const row = `<tr class="row" style="background-color: white; color: black; text-align: center">
                     <td style="padding: 20px; display: flex; align-items: center; justify-content: center">
                         <img src="../assets/Om.jpeg" style="border-radius: 50%; width: 40px; height: 40px" alt="profile" />
@@ -179,20 +183,7 @@ function displayTable() {
     });
 }
 
-$(document).ready(displayTable);
-
-
-
-function makeRequest(url, requestType, data) {
-    var xhr=new XMLHttpRequest();
-    xhr.onreadystatechange=function(){
-        if(xhr.readyState==4 ){
-            console.log(JSON.parse(xhr.response))
-        }
-    }
-    xhr.open(requestType,url,true)
-    xhr.send()
-}
+// $(document).ready(displayTable);
 
 function deleteUser(userId) {
 console.log("id",userId)
@@ -211,49 +202,7 @@ console.log("id",userId)
 }
 
 function editUser(userId) {
-    console.log("im in userid",userId)
-    $.ajax({
-        url: `http://localhost:3000/user/${userId}`,
-        method: "GET",
-        success: function(user) {
-            $("#name").val(user.name);
-            $("#gender").val(user.gender);
-            $("#department").val(user.department.join(", "));  
-            $("#salary").val(user.salary);
-            $("#date").val(user.date);
-            
-            $("#editUserForm").submit(function(event) {
-                event.preventDefault();
-                
-                const updatedData = {
-                    name: $("#name").val(),
-                    gender: $("#gender").val(),
-                    department: [$("#department").val()],
-                    salary: $("#salary").val(),
-                    date: $("#date").val()
-                };
-                
-                updateUser(userId, updatedData);
-            });
-        },
-        error: function(err) {
-            console.error("Error fetching user data", err);
-        }
-    });
-}
-
-function updateUser(userId, updatedData) {
-    $.ajax({
-        url: `http://localhost:3000/user/${userId}`,
-        method: "PUT",
-        data: JSON.stringify(updatedData),
-        contentType: "application/json",
-        success: function(response) {
-            console.log("User updated successfully:", response);
-            displayTable();  
-        },
-        error: function(err) {
-            console.error("Error updating user", err);
-        }
-    });
+    console.log("===================================================")
+    console.log("Fetching user with ID:", userId);
+    window.location.href = `add_user.html?userId=${userId}`;
 }

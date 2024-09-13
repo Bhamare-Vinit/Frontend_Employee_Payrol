@@ -1,7 +1,6 @@
 {
   "user": [
     {
-      "id": "c410",
       "name": "vinit",
       "profile_img": "../assets/Om.jpeg",
       "gender": "male",
@@ -12,21 +11,44 @@
       ],
       "salary": "50000",
       "date": "2/2/2023",
-      "notes": "me"
+      "notes": "meh",
+      "id": "c410"
     },
     {
-      "id": "813e",
-      "name": "bhamare",
+      "name": "bhamare ji",
       "profile_img": "../assets/Om.jpeg",
       "gender": "male",
       "department": [
-        "HR",
-        "Finance",
-        "Others"
+        "Engineer"
       ],
       "salary": "70000",
       "date": "2/2/2024",
-      "notes": "niuhi"
+      "notes": "surname he bhai",
+      "id": "813e"
+    },
+    {
+      "id": "ed1d",
+      "name": "vinit ji",
+      "profile_img": "../assets/Om.jpeg",
+      "gender": "male",
+      "department": [
+        "Finance"
+      ],
+      "salary": "70000",
+      "date": "2/2/2024",
+      "notes": "njnkjnkjn"
+    },
+    {
+      "id": "ad49",
+      "name": "nivit",
+      "profile_img": "../assets/Om.jpeg",
+      "gender": "female",
+      "department": [
+        "Engineer"
+      ],
+      "salary": "70000",
+      "date": "2/1/2024",
+      "notes": "jedwej"
     }
   ]
 }
